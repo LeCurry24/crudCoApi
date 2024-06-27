@@ -30,3 +30,6 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"message": "Root Route"}
+
+if __name__ == '__main__':
+    uvicorn.run('main:app', host='localhost', port=8000, reload=True)
