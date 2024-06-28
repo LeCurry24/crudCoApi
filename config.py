@@ -12,5 +12,11 @@ class Settings:
     POSTGRES_PORT: int = os.getenv("POSTGRES_PORT", 5432)
     POSTGRES_DB: str = os.getenv("POSTGRES_DB")
     DATEBASE_URL: str = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}"
+    ORIGINS = [
+        "http://localhost",
+        "http://localhost:3000",
+        "http://localhost:5173",
+    ]
+
 
 settings = Settings()
