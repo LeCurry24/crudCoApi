@@ -41,5 +41,11 @@ def add_url(url: Urls, session: Session = Depends(get_session)):
     session.refresh(new_url)
     return {"URL ADDED:", new_url.name}
 
+@app.get("/users")
+def list_url(session: Session = Depends(get_session)):
+    statement = select(Users)
+    result = session.exec(statement).first()
+    return result
+
 if __name__ == '__main__':
     uvicorn.run('main:app', host='localhost', port=8000, reload=True)
