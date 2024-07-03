@@ -9,6 +9,7 @@ from db import DATABASE_URL
 
 from models.url import Urls
 from models.users import User
+from models.tokens import InvalidToken
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config

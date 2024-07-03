@@ -11,6 +11,8 @@ psycopg2 = "*"
 alembic = "*"
 python-dotenv = "*"
 bcrypt = "*"
+pyjwt = "*"
+nanoid = "*"
 
 [dev-packages]
 
